@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		107F6CFE2CB440560081BE76 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 107F6CFD2CB440560081BE76 /* KeyboardShortcuts */; };
+		10C012C42D58EB6200691565 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 10C012C32D58EB6200691565 /* AudioKit */; };
+		20FA00012F00000000000001 /* FluidAudio in Frameworks */ = {isa = PBXBuildFile; productRef = 20FA00022F00000000000002 /* FluidAudio */; };
+		20FA00042F00000000000004 /* FluidAudio in Frameworks */ = {isa = PBXBuildFile; productRef = 20FA00022F00000000000002 /* FluidAudio */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		107F6C962CB2DA970081BE76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 107F6C7C2CB2DA960081BE76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 107F6C832CB2DA960081BE76;
+			remoteInfo = Chirp;
+		};
+		107F6CA02CB2DA970081BE76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 107F6C7C2CB2DA960081BE76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 107F6C832CB2DA960081BE76;
+			remoteInfo = Chirp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		107F6C842CB2DA960081BE76 /* Chirp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chirp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		107F6C952CB2DA970081BE76 /* ChirpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChirpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		107F6C9F2CB2DA970081BE76 /* ChirpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChirpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1058DEB52CBDA704007A6542 /* Exceptions for "Chirp" folder in "Chirp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 107F6C832CB2DA960081BE76 /* Chirp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		107F6C862CB2DA960081BE76 /* Chirp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1058DEB52CBDA704007A6542 /* Exceptions for "Chirp" folder in "Chirp" target */,
+			);
+			path = Chirp;
+			sourceTree = "<group>";
+		};
+		107F6C982CB2DA970081BE76 /* ChirpTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ChirpTests;
+			sourceTree = "<group>";
+		};
+		107F6CA22CB2DA970081BE76 /* ChirpUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ChirpUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		107F6C812CB2DA960081BE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10C012C42D58EB6200691565 /* AudioKit in Frameworks */,
+				20FA00012F00000000000001 /* FluidAudio in Frameworks */,
+				107F6CFE2CB440560081BE76 /* KeyboardShortcuts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107F6C922CB2DA970081BE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20FA00042F00000000000004 /* FluidAudio in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107F6C9C2CB2DA970081BE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		107F6C7B2CB2DA960081BE76 = {
+			isa = PBXGroup;
+			children = (
+				107F6C862CB2DA960081BE76 /* Chirp */,
+				107F6C982CB2DA970081BE76 /* ChirpTests */,
+				107F6CA22CB2DA970081BE76 /* ChirpUITests */,
+				107F6C852CB2DA960081BE76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		107F6C852CB2DA960081BE76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				107F6C842CB2DA960081BE76 /* Chirp.app */,
+				107F6C952CB2DA970081BE76 /* ChirpTests.xctest */,
+				107F6C9F2CB2DA970081BE76 /* ChirpUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		107F6C832CB2DA960081BE76 /* Chirp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107F6CA92CB2DA970081BE76 /* Build configuration list for PBXNativeTarget "Chirp" */;
+			buildPhases = (
+				107F6C802CB2DA960081BE76 /* Sources */,
+				107F6C812CB2DA960081BE76 /* Frameworks */,
+				107F6C822CB2DA960081BE76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				107F6C862CB2DA960081BE76 /* Chirp */,
+			);
+			name = Chirp;
+			packageProductDependencies = (
+				107F6CFD2CB440560081BE76 /* KeyboardShortcuts */,
+				10C012C32D58EB6200691565 /* AudioKit */,
+				20FA00022F00000000000002 /* FluidAudio */,
+			);
+			productName = Chirp;
+			productReference = 107F6C842CB2DA960081BE76 /* Chirp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		107F6C942CB2DA970081BE76 /* ChirpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107F6CAC2CB2DA970081BE76 /* Build configuration list for PBXNativeTarget "ChirpTests" */;
+			buildPhases = (
+				107F6C912CB2DA970081BE76 /* Sources */,
+				107F6C922CB2DA970081BE76 /* Frameworks */,
+				107F6C932CB2DA970081BE76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				107F6C972CB2DA970081BE76 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				107F6C982CB2DA970081BE76 /* ChirpTests */,
+			);
+			name = ChirpTests;
+			packageProductDependencies = (
+				20FA00022F00000000000002 /* FluidAudio */,
+			);
+			productName = ChirpTests;
+			productReference = 107F6C952CB2DA970081BE76 /* ChirpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		107F6C9E2CB2DA970081BE76 /* ChirpUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 107F6CAF2CB2DA970081BE76 /* Build configuration list for PBXNativeTarget "ChirpUITests" */;
+			buildPhases = (
+				107F6C9B2CB2DA970081BE76 /* Sources */,
+				107F6C9C2CB2DA970081BE76 /* Frameworks */,
+				107F6C9D2CB2DA970081BE76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				107F6CA12CB2DA970081BE76 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				107F6CA22CB2DA970081BE76 /* ChirpUITests */,
+			);
+			name = ChirpUITests;
+			packageProductDependencies = (
+			);
+			productName = ChirpUITests;
+			productReference = 107F6C9F2CB2DA970081BE76 /* ChirpUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		107F6C7C2CB2DA960081BE76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					107F6C832CB2DA960081BE76 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					107F6C942CB2DA970081BE76 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 107F6C832CB2DA960081BE76;
+					};
+					107F6C9E2CB2DA970081BE76 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 107F6C832CB2DA960081BE76;
+					};
+				};
+			};
+			buildConfigurationList = 107F6C7F2CB2DA960081BE76 /* Build configuration list for PBXProject "Chirp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 107F6C7B2CB2DA960081BE76;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				107F6CFC2CB440560081BE76 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+				10C012C22D58EB6200691565 /* XCRemoteSwiftPackageReference "AudioKit" */,
+				20FA00032F00000000000003 /* XCRemoteSwiftPackageReference "FluidAudio" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 107F6C852CB2DA960081BE76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				107F6C832CB2DA960081BE76 /* Chirp */,
+				107F6C942CB2DA970081BE76 /* ChirpTests */,
+				107F6C9E2CB2DA970081BE76 /* ChirpUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		107F6C822CB2DA960081BE76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107F6C932CB2DA970081BE76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107F6C9D2CB2DA970081BE76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		107F6C802CB2DA960081BE76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107F6C912CB2DA970081BE76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		107F6C9B2CB2DA970081BE76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		107F6C972CB2DA970081BE76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 107F6C832CB2DA960081BE76 /* Chirp */;
+			targetProxy = 107F6C962CB2DA970081BE76 /* PBXContainerItemProxy */;
+		};
+		107F6CA12CB2DA970081BE76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 107F6C832CB2DA960081BE76 /* Chirp */;
+			targetProxy = 107F6CA02CB2DA970081BE76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		107F6CA72CB2DA970081BE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		107F6CA82CB2DA970081BE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		107F6CAA2CB2DA970081BE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Chirp/Chirp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Chirp/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chirp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = " [BLANK_AUDIO]";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Lightning fast audio transcription";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.Chirp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		107F6CAB2CB2DA970081BE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Chirp/Chirp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Chirp/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chirp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = " [BLANK_AUDIO]";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Lightning fast audio transcription";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.Chirp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		107F6CAD2CB2DA970081BE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../../../Chirp.app/Contents/MacOS",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(BUILT_PRODUCTS_DIR)/Chirp.app/Contents/MacOS/Chirp.debug.dylib";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.ChirpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		107F6CAE2CB2DA970081BE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../../../Chirp.app/Contents/MacOS",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(BUILT_PRODUCTS_DIR)/Chirp.app/Contents/MacOS/Chirp.debug.dylib";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.ChirpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		107F6CB02CB2DA970081BE76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.ChirpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = Chirp;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		107F6CB12CB2DA970081BE76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.ChirpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = Chirp;
+				XROS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		107F6C7F2CB2DA960081BE76 /* Build configuration list for PBXProject "Chirp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107F6CA72CB2DA970081BE76 /* Debug */,
+				107F6CA82CB2DA970081BE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		107F6CA92CB2DA970081BE76 /* Build configuration list for PBXNativeTarget "Chirp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107F6CAA2CB2DA970081BE76 /* Debug */,
+				107F6CAB2CB2DA970081BE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		107F6CAC2CB2DA970081BE76 /* Build configuration list for PBXNativeTarget "ChirpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107F6CAD2CB2DA970081BE76 /* Debug */,
+				107F6CAE2CB2DA970081BE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		107F6CAF2CB2DA970081BE76 /* Build configuration list for PBXNativeTarget "ChirpUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				107F6CB02CB2DA970081BE76 /* Debug */,
+				107F6CB12CB2DA970081BE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		107F6CFC2CB440560081BE76 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+		10C012C22D58EB6200691565 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.4;
+			};
+		};
+		20FA00032F00000000000003 /* XCRemoteSwiftPackageReference "FluidAudio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FluidInference/FluidAudio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		107F6CFD2CB440560081BE76 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 107F6CFC2CB440560081BE76 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+		10C012C32D58EB6200691565 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10C012C22D58EB6200691565 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+		20FA00022F00000000000002 /* FluidAudio */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20FA00032F00000000000003 /* XCRemoteSwiftPackageReference "FluidAudio" */;
+			productName = FluidAudio;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 107F6C7C2CB2DA960081BE76 /* Project object */;
+}

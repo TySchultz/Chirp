@@ -1,0 +1,27 @@
+.DS_Store
+
+# Xcode user state
+*.xcuserstate
+xcuserdata/
+
+# Build products and package caches
+DerivedData/
+.build/
+build/
+__pycache__/
+*.py[cod]
+
+# Local configuration and secrets
+.env
+.env.*
+*.xcconfig
+
+# Local model artifacts
+Chirp/Model/
+*.bin
+*.gguf
+*.safetensors
+*.mlmodel
+*.mlmodelc/
+*.onnx
+*.tflite

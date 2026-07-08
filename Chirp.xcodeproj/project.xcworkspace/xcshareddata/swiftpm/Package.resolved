@@ -1,0 +1,33 @@
+{
+  "originHash" : "7780912a19773506fd377b1c24d99d8b9fe1abf196870fb2163259c2de6cad13",
+  "pins" : [
+    {
+      "identity" : "audiokit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AudioKit/AudioKit",
+      "state" : {
+        "revision" : "2ebd422855e4645d3169f83d1765d1c8196b4f46",
+        "version" : "5.6.4"
+      }
+    },
+    {
+      "identity" : "fluidaudio",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FluidInference/FluidAudio.git",
+      "state" : {
+        "revision" : "b1c82cfbfd303698f330b6a347dbfadf093463e4",
+        "version" : "0.15.0"
+      }
+    },
+    {
+      "identity" : "keyboardshortcuts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/KeyboardShortcuts",
+      "state" : {
+        "revision" : "7ecc38bb6edf7d087d30e737057b8d8a9b7f51eb",
+        "version" : "2.2.4"
+      }
+    }
+  ],
+  "version" : 3
+}
