@@ -4,11 +4,11 @@
 
 # Chirp
 
-Chirp is a macOS dictation app for fast, private transcription. It records from your microphone, transcribes speech locally with FluidAudio, and can copy or paste the transcript into the app you were already using.
+Chirp is a macOS dictation app for fast, private transcription. It records from your microphone, transcribes speech locally with Apple's Speech framework, and can copy or paste the transcript into the app you were already using.
 
 ## Features
 
-- Local speech transcription powered by [FluidAudio](https://github.com/FluidInference/FluidAudio)
+- Local speech transcription powered by Apple's `SpeechAnalyzer` and `SpeechTranscriber`
 - Global keyboard shortcut recording
 - Toggle and press-and-hold recording modes
 - Automatic clipboard copy and optional paste into the active text field
@@ -20,11 +20,11 @@ Chirp is a macOS dictation app for fast, private transcription. It records from 
 
 Chirp is designed around local transcription. Your recorded audio is processed on your Mac instead of being sent to a transcription API.
 
-On first use, FluidAudio may download its local speech model files. After the model is available, transcription runs locally.
+On first use, macOS may download the required Apple Speech model. The system manages and updates that model, and transcription runs locally.
 
 ## Requirements
 
-- macOS 14.6 or newer
+- macOS 26 or newer
 - Xcode with the macOS SDK
 - A Mac capable of running local speech transcription models
 
@@ -81,7 +81,7 @@ To use automatic paste, macOS may require Accessibility permission so Chirp can 
 
 Chirp uses Swift Package Manager dependencies resolved through the Xcode project:
 
-- [FluidAudio](https://github.com/FluidInference/FluidAudio) for local speech recognition
+- Apple's Speech framework for local speech recognition
 - [AudioKit](https://github.com/AudioKit/AudioKit) for audio utilities
 - [KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts) for global shortcut configuration
 

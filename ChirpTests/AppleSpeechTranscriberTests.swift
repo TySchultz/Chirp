@@ -1,74 +1,63 @@
 //
-//  FluidAudioTranscriberTests.swift
+//  AppleSpeechTranscriberTests.swift
 //  ChirpTests
 //
-//
 
-import Foundation
+import AVFAudio
 import CoreAudio
+import Foundation
 import Testing
 @testable import Chirp
 
-struct FluidAudioTranscriberTests {
-  @Test func recordedAudioDecodesFloatSamplesWithoutAFileHop() {
+struct AppleSpeechTranscriberTests {
+  @Test func recordedAudioCreatesFloatPCMBufferWithoutAFileHop() throws {
     let samples: [Float] = [0, 0.25, -0.5, 1.0]
-    let data = samples.withUnsafeBufferPointer { buffer in
-      Data(buffer: buffer)
-    }
+    let data = samples.withUnsafeBufferPointer { Data(buffer: $0) }
     let recordedAudio = RecordedAudio(
       pcmData: data,
       sampleRate: 16_000,
       duration: 0.25
     )
 
-    #expect(recordedAudio.floatSamples() == samples)
-    #expect(recordedAudio.sampleCount == samples.count)
+    let buffer = try AppleSpeechTranscriber.makePCMBuffer(from: recordedAudio)
+
+    #expect(buffer.frameLength == AVAudioFrameCount(samples.count))
+    #expect(buffer.format.sampleRate == 16_000)
+    #expect(buffer.format.channelCount == 1)
+    #expect(Array(UnsafeBufferPointer(start: buffer.floatChannelData?.pointee, count: samples.count)) == samples)
   }
 
-  @Test func recordedAudioReturnsNoSamplesForEmptyPCM() {
+  @Test func emptyRecordedAudioThrows() {
     let recordedAudio = RecordedAudio(
       pcmData: Data(),
       sampleRate: 16_000,
       duration: 0
     )
 
-    #expect(recordedAudio.floatSamples().isEmpty)
-    #expect(recordedAudio.transcriptionSamples().isEmpty)
+    #expect(throws: AppleSpeechTranscriptionError.emptyAudio) {
+      try AppleSpeechTranscriber.makePCMBuffer(from: recordedAudio)
+    }
   }
 
-  @Test func recordedAudioPadsShortTranscriptionSamples() {
-    let samples: [Float] = [0.25, -0.25]
-    let data = samples.withUnsafeBufferPointer { buffer in
-      Data(buffer: buffer)
-    }
+  @Test func malformedRecordedAudioThrows() {
     let recordedAudio = RecordedAudio(
-      pcmData: data,
+      pcmData: Data([0, 1, 2]),
       sampleRate: 16_000,
-      duration: 0.000125
+      duration: 0
     )
 
-    let paddedSamples = recordedAudio.transcriptionSamples(minimumSampleCount: 4)
-
-    #expect(paddedSamples == [0.25, -0.25, 0, 0])
-  }
-
-  @Test func recordedAudioDoesNotPadLongEnoughTranscriptionSamples() {
-    let samples: [Float] = [0.25, -0.25, 0.1, -0.1]
-    let data = samples.withUnsafeBufferPointer { buffer in
-      Data(buffer: buffer)
+    #expect(throws: AppleSpeechTranscriptionError.invalidAudio) {
+      try AppleSpeechTranscriber.makePCMBuffer(from: recordedAudio)
     }
-    let recordedAudio = RecordedAudio(
-      pcmData: data,
-      sampleRate: 16_000,
-      duration: 0.00025
-    )
-
-    #expect(recordedAudio.transcriptionSamples(minimumSampleCount: 4) == samples)
   }
 
-  @Test func fluidAudioErrorsDescribeEmptyAudioAndOutput() {
-    #expect(FluidAudioTranscriptionError.emptyAudio.errorDescription == "No audio was captured.")
-    #expect(FluidAudioTranscriptionError.emptyOutput.errorDescription == "FluidAudio returned an empty transcription.")
+  @Test func appleSpeechErrorsDescribeEmptyAudioAndOutput() {
+    #expect(AppleSpeechTranscriptionError.emptyAudio.errorDescription == "No audio was captured.")
+    #expect(AppleSpeechTranscriptionError.emptyOutput.errorDescription == "Apple Speech returned an empty transcription.")
+  }
+
+  @Test func normalizedTextTrimsWhitespace() throws {
+    #expect(try AppleSpeechTranscriber.normalizedText(from: "  Hello world.\n") == "Hello world.")
   }
 
   @Test func automaticInputPrefersBuiltInMicOverBluetooth() {

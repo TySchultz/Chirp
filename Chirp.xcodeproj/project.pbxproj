@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		107F6CFE2CB440560081BE76 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 107F6CFD2CB440560081BE76 /* KeyboardShortcuts */; };
 		10C012C42D58EB6200691565 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 10C012C32D58EB6200691565 /* AudioKit */; };
-		20FA00012F00000000000001 /* FluidAudio in Frameworks */ = {isa = PBXBuildFile; productRef = 20FA00022F00000000000002 /* FluidAudio */; };
-		20FA00042F00000000000004 /* FluidAudio in Frameworks */ = {isa = PBXBuildFile; productRef = 20FA00022F00000000000002 /* FluidAudio */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C012C42D58EB6200691565 /* AudioKit in Frameworks */,
-				20FA00012F00000000000001 /* FluidAudio in Frameworks */,
 				107F6CFE2CB440560081BE76 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20FA00042F00000000000004 /* FluidAudio in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +134,6 @@
 			packageProductDependencies = (
 				107F6CFD2CB440560081BE76 /* KeyboardShortcuts */,
 				10C012C32D58EB6200691565 /* AudioKit */,
-				20FA00022F00000000000002 /* FluidAudio */,
 			);
 			productName = Chirp;
 			productReference = 107F6C842CB2DA960081BE76 /* Chirp.app */;
@@ -162,7 +157,6 @@
 			);
 			name = ChirpTests;
 			packageProductDependencies = (
-				20FA00022F00000000000002 /* FluidAudio */,
 			);
 			productName = ChirpTests;
 			productReference = 107F6C952CB2DA970081BE76 /* ChirpTests.xctest */;
@@ -226,7 +220,6 @@
 			packageReferences = (
 				107F6CFC2CB440560081BE76 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 				10C012C22D58EB6200691565 /* XCRemoteSwiftPackageReference "AudioKit" */,
-				20FA00032F00000000000003 /* XCRemoteSwiftPackageReference "FluidAudio" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 107F6C852CB2DA960081BE76 /* Products */;
@@ -431,6 +424,7 @@
 				INFOPLIST_FILE = Chirp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = " [BLANK_AUDIO]";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Lightning fast audio transcription";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Chirp uses on-device speech recognition to transcribe your recordings.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -444,7 +438,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.Chirp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,6 +466,7 @@
 				INFOPLIST_FILE = Chirp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = " [BLANK_AUDIO]";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Lightning fast audio transcription";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Chirp uses on-device speech recognition to transcribe your recordings.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -485,7 +480,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.01;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.Chirp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,7 +504,7 @@
 					"$(inherited)",
 					"@loader_path/../../../Chirp.app/Contents/MacOS",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(BUILT_PRODUCTS_DIR)/Chirp.app/Contents/MacOS/Chirp.debug.dylib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.ChirpTests;
@@ -534,7 +529,7 @@
 					"$(inherited)",
 					"@loader_path/../../../Chirp.app/Contents/MacOS",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(BUILT_PRODUCTS_DIR)/Chirp.app/Contents/MacOS/Chirp.debug.dylib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.ChirpTests;
@@ -555,7 +550,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.ChirpUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -576,7 +571,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chirpapp.ChirpUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -648,14 +643,6 @@
 				minimumVersion = 5.6.4;
 			};
 		};
-		20FA00032F00000000000003 /* XCRemoteSwiftPackageReference "FluidAudio" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FluidInference/FluidAudio.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.12.4;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -668,11 +655,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 10C012C22D58EB6200691565 /* XCRemoteSwiftPackageReference "AudioKit" */;
 			productName = AudioKit;
-		};
-		20FA00022F00000000000002 /* FluidAudio */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 20FA00032F00000000000003 /* XCRemoteSwiftPackageReference "FluidAudio" */;
-			productName = FluidAudio;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

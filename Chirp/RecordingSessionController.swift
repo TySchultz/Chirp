@@ -107,7 +107,7 @@ final class RecordingSessionController: ObservableObject {
   let inputDeviceMonitor = AudioInputDeviceMonitor()
 
   private let audioRecorder = AudioRecorder()
-  private let transcriptionManager: FluidAudioTranscriptionManager
+  private let transcriptionManager: AppleSpeechTranscriptionManager
   private let recordingStartedSound = NSSound(named: NSSound.Name("Pop"))
   private var recordingPanel: FloatingPanel?
   private var didSetupKeyboardShortcut = false
@@ -115,7 +115,7 @@ final class RecordingSessionController: ObservableObject {
   nonisolated private let shortcutPressState = RecordingShortcutPressState()
   private var cancellables: Set<AnyCancellable> = []
 
-  init(transcriptionManager: FluidAudioTranscriptionManager) {
+  init(transcriptionManager: AppleSpeechTranscriptionManager) {
     self.transcriptionManager = transcriptionManager
     inputDevices = inputDeviceMonitor.devices
     inputDeviceMonitor.$devices

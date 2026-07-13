@@ -19,13 +19,13 @@ enum ChirpWindows: Int, Hashable, Identifiable {
 
 @main
 struct ChirpApp: App {
-  @StateObject private var transcriptionManager: FluidAudioTranscriptionManager
+  @StateObject private var transcriptionManager: AppleSpeechTranscriptionManager
   @StateObject private var recordingSession: RecordingSessionController
   
   @State var chirpWindow: ChirpWindows = .chirp
 
   init() {
-    let transcriptionManager = FluidAudioTranscriptionManager()
+    let transcriptionManager = AppleSpeechTranscriptionManager()
     _transcriptionManager = StateObject(wrappedValue: transcriptionManager)
     _recordingSession = StateObject(wrappedValue: RecordingSessionController(transcriptionManager: transcriptionManager))
     transcriptionManager.loadModel()

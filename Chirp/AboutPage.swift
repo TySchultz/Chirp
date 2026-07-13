@@ -105,12 +105,6 @@ struct AboutPage: View {
                     )
                     
                     OpenSourceLibrary(
-                        name: "FluidAudio",
-                        description: "Local speech transcription on Apple devices using Core ML audio models.",
-                        url: "https://github.com/FluidInference/FluidAudio"
-                    )
-                    
-                    OpenSourceLibrary(
                         name: "KeyboardShortcuts",
                         description: "Add user-customizable global keyboard shortcuts to your macOS app in minutes.",
                         url: "https://github.com/sindresorhus/KeyboardShortcuts"

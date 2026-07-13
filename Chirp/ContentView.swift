@@ -51,7 +51,7 @@ enum RecordingShortcutMode: String, CaseIterable, Identifiable {
 }
 
 struct ContentView: View {
-  @EnvironmentObject private var transcriptionManager: FluidAudioTranscriptionManager
+  @EnvironmentObject private var transcriptionManager: AppleSpeechTranscriptionManager
   @ObservedObject var recordingSession: RecordingSessionController
   @Environment(\.openWindow) var openWindow
   
@@ -306,13 +306,13 @@ struct ContentView: View {
   private var setupStatusTitle: String {
     switch transcriptionManager.modelState {
       case .failed:
-        return "FluidAudio setup failed"
+        return "Apple Speech setup failed"
       case .loaded:
-        return "FluidAudio ready"
+        return "Apple Speech ready"
       case .loading:
-        return "Preparing FluidAudio..."
+        return "Preparing Apple Speech..."
       case .unloaded:
-        return "FluidAudio ready on demand"
+        return "Apple Speech ready on demand"
     }
   }
 
