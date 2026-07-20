@@ -19,16 +19,18 @@ enum ChirpWindows: Int, Hashable, Identifiable {
 
 @main
 struct ChirpApp: App {
-  @StateObject private var transcriptionManager: AppleSpeechTranscriptionManager
+  @StateObject private var transcriptionManager: TranscriptionManager
   @StateObject private var recordingSession: RecordingSessionController
   
   @State var chirpWindow: ChirpWindows = .chirp
 
   init() {
-    let transcriptionManager = AppleSpeechTranscriptionManager()
+    let transcriptionManager = TranscriptionManager()
     _transcriptionManager = StateObject(wrappedValue: transcriptionManager)
     _recordingSession = StateObject(wrappedValue: RecordingSessionController(transcriptionManager: transcriptionManager))
-    transcriptionManager.loadModel()
+    if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil {
+      transcriptionManager.loadModel()
+    }
   }
 
   var body: some Scene {

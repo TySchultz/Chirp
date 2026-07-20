@@ -51,7 +51,7 @@ enum RecordingShortcutMode: String, CaseIterable, Identifiable {
 }
 
 struct ContentView: View {
-  @EnvironmentObject private var transcriptionManager: AppleSpeechTranscriptionManager
+  @EnvironmentObject private var transcriptionManager: TranscriptionManager
   @ObservedObject var recordingSession: RecordingSessionController
   @Environment(\.openWindow) var openWindow
   
@@ -306,13 +306,13 @@ struct ContentView: View {
   private var setupStatusTitle: String {
     switch transcriptionManager.modelState {
       case .failed:
-        return "Apple Speech setup failed"
+        return "Parakeet unavailable"
       case .loaded:
-        return "Apple Speech ready"
+        return "Parakeet ready"
       case .loading:
-        return "Preparing Apple Speech..."
+        return "Preparing Parakeet..."
       case .unloaded:
-        return "Apple Speech ready on demand"
+        return "Parakeet ready on demand"
     }
   }
 

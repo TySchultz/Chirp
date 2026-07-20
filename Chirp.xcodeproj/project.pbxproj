@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		107F6CFE2CB440560081BE76 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 107F6CFD2CB440560081BE76 /* KeyboardShortcuts */; };
 		10C012C42D58EB6200691565 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 10C012C32D58EB6200691565 /* AudioKit */; };
+		20AC00012F10000000000001 /* TranscribeCppRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 20AC00032F10000000000003 /* TranscribeCppRuntime */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C012C42D58EB6200691565 /* AudioKit in Frameworks */,
+				20AC00012F10000000000001 /* TranscribeCppRuntime in Frameworks */,
 				107F6CFE2CB440560081BE76 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +124,7 @@
 				107F6C802CB2DA960081BE76 /* Sources */,
 				107F6C812CB2DA960081BE76 /* Frameworks */,
 				107F6C822CB2DA960081BE76 /* Resources */,
+				20AC00042F10000000000004 /* Normalize CTranscribe Framework */,
 			);
 			buildRules = (
 			);
@@ -134,6 +137,7 @@
 			packageProductDependencies = (
 				107F6CFD2CB440560081BE76 /* KeyboardShortcuts */,
 				10C012C32D58EB6200691565 /* AudioKit */,
+				20AC00032F10000000000003 /* TranscribeCppRuntime */,
 			);
 			productName = Chirp;
 			productReference = 107F6C842CB2DA960081BE76 /* Chirp.app */;
@@ -220,6 +224,7 @@
 			packageReferences = (
 				107F6CFC2CB440560081BE76 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 				10C012C22D58EB6200691565 /* XCRemoteSwiftPackageReference "AudioKit" */,
+				20AC00022F10000000000002 /* XCLocalSwiftPackageReference "TranscribeCppRuntime" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 107F6C852CB2DA960081BE76 /* Products */;
@@ -256,6 +261,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20AC00042F10000000000004 /* Normalize CTranscribe Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/script/normalize_transcribe_framework.sh",
+				"$(TARGET_BUILD_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CTranscribe.framework/Versions/A/CTranscribe",
+			);
+			name = "Normalize CTranscribe Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "\"$SRCROOT/script/normalize_transcribe_framework.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		107F6C802CB2DA960081BE76 /* Sources */ = {
@@ -420,6 +449,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Chirp/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Chirp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = " [BLANK_AUDIO]";
@@ -462,6 +492,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Chirp/Preview Content\"";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Chirp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = " [BLANK_AUDIO]";
@@ -645,6 +676,13 @@
 		};
 /* End XCRemoteSwiftPackageReference section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		20AC00022F10000000000002 /* XCLocalSwiftPackageReference "TranscribeCppRuntime" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/TranscribeCppRuntime;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		107F6CFD2CB440560081BE76 /* KeyboardShortcuts */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -655,6 +693,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 10C012C22D58EB6200691565 /* XCRemoteSwiftPackageReference "AudioKit" */;
 			productName = AudioKit;
+		};
+		20AC00032F10000000000003 /* TranscribeCppRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20AC00022F10000000000002 /* XCLocalSwiftPackageReference "TranscribeCppRuntime" */;
+			productName = TranscribeCppRuntime;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

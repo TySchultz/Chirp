@@ -22,7 +22,7 @@ struct HowItWorksView: View {
           Text("Simple Dictation")
             .fontWeight(.medium)
             .font(.title3)
-          Text("Use your configured hotkey behavior and start talking. Chirp transcribes your audio locally with Apple Speech and copies the result to your clipboard.")
+          Text("Use your configured hotkey behavior and start talking. Chirp transcribes your audio locally with Parakeet through transcribe.cpp and copies the result to your clipboard. Apple Speech remains available as a fallback.")
             .frame(maxWidth: .infinity, alignment: .leading)
           
           Text("Turn on automatic paste to insert the transcript into your active text field as soon as processing finishes.")

@@ -99,6 +99,18 @@ struct AboutPage: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                     OpenSourceLibrary(
+                        name: "transcribe.cpp",
+                        description: "A local C/C++ speech-to-text runtime using ggml and Metal.",
+                        url: "https://github.com/handy-computer/transcribe.cpp"
+                    )
+
+                    OpenSourceLibrary(
+                        name: "NVIDIA Parakeet TDT 0.6B v2",
+                        description: "Chirp's local English transcription model, distributed under CC-BY-4.0.",
+                        url: "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2"
+                    )
+
+                    OpenSourceLibrary(
                         name: "Audio Kit",
                         description: "AudioKit is an audio synthesis, processing, and analysis platform for iOS, macOS (including Catalyst), and tvOS.",
                         url: "https://github.com/AudioKit/AudioKit"

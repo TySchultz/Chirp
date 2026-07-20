@@ -4,11 +4,11 @@
 
 # Chirp
 
-Chirp is a macOS dictation app for fast, private transcription. It records from your microphone, transcribes speech locally with Apple's Speech framework, and can copy or paste the transcript into the app you were already using.
+Chirp is a macOS dictation app for fast, private transcription. It records from your microphone, transcribes speech locally with Parakeet through `transcribe.cpp`, and can copy or paste the transcript into the app you were already using. Apple's Speech framework remains available as a fallback.
 
 ## Features
 
-- Local speech transcription powered by Apple's `SpeechAnalyzer` and `SpeechTranscriber`
+- Local speech transcription powered by Parakeet TDT 0.6B v2 and [`transcribe.cpp`](https://github.com/handy-computer/transcribe.cpp)
 - Global keyboard shortcut recording
 - Toggle and press-and-hold recording modes
 - Automatic clipboard copy and optional paste into the active text field
@@ -20,7 +20,7 @@ Chirp is a macOS dictation app for fast, private transcription. It records from 
 
 Chirp is designed around local transcription. Your recorded audio is processed on your Mac instead of being sent to a transcription API.
 
-On first use, macOS may download the required Apple Speech model. The system manages and updates that model, and transcription runs locally.
+On first use, Chirp downloads and verifies the Parakeet TDT 0.6B v2 Q4_K_M model. After installation, transcription runs locally through `transcribe.cpp` with Metal acceleration on Apple Silicon. If Parakeet is unavailable, macOS may download an Apple Speech model for the fallback engine.
 
 ## Requirements
 
@@ -81,7 +81,9 @@ To use automatic paste, macOS may require Accessibility permission so Chirp can 
 
 Chirp uses Swift Package Manager dependencies resolved through the Xcode project:
 
-- Apple's Speech framework for local speech recognition
+- [`transcribe.cpp`](https://github.com/handy-computer/transcribe.cpp) for local Parakeet inference
+- [NVIDIA Parakeet TDT 0.6B v2](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2) model weights (CC-BY-4.0)
+- Apple's Speech framework as a local fallback
 - [AudioKit](https://github.com/AudioKit/AudioKit) for audio utilities
 - [KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts) for global shortcut configuration
 
